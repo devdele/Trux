@@ -30,14 +30,14 @@ function App() {
     <div className="min-h-screen bg-[#181F35] text-white">
       {/* Navbar */}
       <nav className="fixed w-full bg-[#181F35]/90 backdrop-blur-sm z-50">
-        <div className="container w-full px-4">
-          <div className="flex items-center h-16 w-full">
+        <div className="container mx-full px-4">
+          <div className="flex items-center justify-between h-16">
             <div className="flex items-center space-x-8">
-              <div className="items-start h-24">
+              <div className="flex items-center space-x-2">
                 <img 
-                src={logo} 
-                alt="logo"
-                className="w-32 h-20 object-center"
+                  src={logo} 
+                  alt="logo"
+                  className="w-32 h-20 object-center"
                 />
               </div>
               
@@ -91,17 +91,17 @@ function App() {
             
             {/* Mobile menu button */}
             <button 
-              className="md:hidden ml-4"
+              className="md:hidden"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
-              {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6 absolute right"/>}
             </button>
           </div>
         </div>
         
         {/* Mobile menu */}
         {isMenuOpen && (
-          <div className="md:hidden p-4 bg-[#181F35] border-t border-[#22D1F8]/20">
+          <div className="md:hidden p-4 bg-[#181F35] border-t border-[#22D1F8]/20 absolute right-0 w-64">
             <div className="flex flex-col space-y-4">
               <a href="#home" onClick={handleMobileNavClick} className="hover:text-[#22D1F8] transition-colors">Home</a>
               <a href="#about" onClick={handleMobileNavClick} className="hover:text-[#22D1F8] transition-colors">About</a>
@@ -111,7 +111,7 @@ function App() {
               {/* Mobile Social Links */}
               <div className="pt-2 border-t border-[#22D1F8]/20">
                 <p className="text-sm text-[#abc4ff] mb-2">Social Links</p>
-                <div className="grid grid-cols-2 gap-2">
+                <div className="grid grid-cols-1 gap-2">
                   <a href="https://t.me/pixelpoint" target="_blank" rel="noopener noreferrer" 
                     className="flex items-center space-x-1 text-sm hover:text-[#22D1F8]">
                     <span>Telegram</span>
@@ -159,9 +159,9 @@ function App() {
               <Copy className="w-4 h-4 md:w-5 md:h-5" />
             </button>
           </div>
-          {/* Buy Now Button - pushed to the right */}
+          {/* Buy Now Button */}
           <div className='pt-6'>
-            <button className="mx-auto bg-gradient-to-r from-[#22D1F8] to-[#FF4EA3] md:px-6 py-2 rounded-full flex items-center space-x-2 hover:opacity-90 transition-opacity text-sm md:text-base">
+            <button className="px-2 mx-auto bg-gradient-to-r from-[#22D1F8] to-[#FF4EA3] md:px-6 py-2 rounded-full flex items-center space-x-2 hover:opacity-90 transition-opacity text-sm md:text-base">
               <Wallet className="w-4 h-4" />
               <span>Buy Now</span>
             </button>
@@ -193,7 +193,7 @@ function App() {
             <img 
               src={coffeeboy}
               alt="Funny tech"
-              className="w-full h-full object-cover transition-transform duration-300"
+              className="w-64 h-64 md:w-full md:h-full object-cover mx-auto"
             />
           </div>
         </div>
@@ -244,7 +244,7 @@ function App() {
             Pixelnomics
           </h2>
           <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
-            <div className="flex justify-center order-2 md:order-1">
+            <div className="w-64 h-64 md:w-full md:h-full object-cover mx-auto">
               <img 
                 src={chartboy}
                 alt="Tokenomics"
