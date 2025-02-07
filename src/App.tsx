@@ -4,11 +4,11 @@ import {
   X,
   ExternalLink, 
   Copy,
-  Wallet,
 } from 'lucide-react';
 import logo from '../src/assets/logopix.png';
 import coffeeboy from '../src/assets/Coffeeboy.png';
 import chartboy from '../src/assets/pizzaboy.png';
+import ray from '../src/assets/logoraydium.png';
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -33,11 +33,11 @@ function App() {
         <div className="container mx-full px-4">
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center space-x-8">
-              <div className="flex items-center space-x-2">
+              <div className="absolute left-0 items-center space-x-2">
                 <img 
                   src={logo} 
                   alt="logo"
-                  className="w-32 h-20 object-center"
+                  className="w-24 h-14 md:w-32 md:h-16 object-center"
                 />
               </div>
               
@@ -94,7 +94,7 @@ function App() {
               className="md:hidden"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
-              {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6 absolute right"/>}
+              {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6 right-6"/>}
             </button>
           </div>
         </div>
@@ -160,9 +160,13 @@ function App() {
             </button>
           </div>
           {/* Buy Now Button */}
-          <div className='pt-6'>
-            <button className="px-2 mx-auto bg-gradient-to-r from-[#22D1F8] to-[#FF4EA3] md:px-6 py-2 rounded-full flex items-center space-x-2 hover:opacity-90 transition-opacity text-sm md:text-base">
-              <Wallet className="w-4 h-4" />
+          <div className='pt-4'>
+            <button className="px-2 mx-auto md:px-6 py-0 rounded-full flex items-start space-x-0 hover:opacity-90 transition-opacity text-sm md:text-base">
+              <img 
+                src={ray} 
+                alt="ray"
+                className="w-12 h-8 pt-0 pb-1"
+              />
               <span>Buy Now</span>
             </button>
           </div>
