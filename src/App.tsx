@@ -107,7 +107,7 @@ function App() {
             
             {/* Mobile menu button */}
             <button 
-              className="md:hidden"
+              className="md:hidden absolute right-2"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
               {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6 right-6"/>}
