@@ -316,11 +316,11 @@ function App() {
             {[
               {
                 step: 1,
-                text: "Get a metamask wallet. We don't care which one, but don't come crying to us if you lose your seed phrase.",
+                text: "Get a Phantom or metamask wallet. We don't care which one, but don't come crying to us if you lose your seed phrase.",
               },
               {
                 step: 2,
-                text: "Buy some BNB. We don't accept dogecoin, sorry.",
+                text: "Buy some SOL. We only accept SOL, sorry.",
               },
               {
                 step: 3,
