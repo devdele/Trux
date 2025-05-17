@@ -7,7 +7,7 @@ html {
 }
 
 body {
-  background: #181F35;
+  @apply bg-white text-gray-900 dark:bg-[#181F35] dark:text-white transition-colors duration-300;
 }
 
 /* Custom animation for hover effects */
@@ -25,4 +25,82 @@ body {
 
 .hover-float:hover {
   animation: float 2s ease-in-out infinite;
+}
+
+/* Slide up animation for cookie consent */
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-slideUp {
+  animation: slideUp 0.5s ease-out forwards;
+}
+
+/* Fade in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 1s ease-out forwards;
+}
+
+/* Pulse animation */
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Gradient text */
+.gradient-text {
+  @apply bg-gradient-to-r from-[#22D1F8] to-[#FF4EA3] text-transparent bg-clip-text;
+}
+
+/* Card hover effects */
+.card-hover {
+  @apply transition-all duration-300 hover:-translate-y-2 hover:shadow-lg;
+}
+
+/* Button styles */
+.btn-primary {
+  @apply px-6 py-2 bg-gradient-to-r from-[#22D1F8] to-[#FF4EA3] rounded-md text-white font-medium transition-transform hover:scale-105;
+}
+
+.btn-secondary {
+  @apply px-6 py-2 bg-transparent border border-[#22D1F8]/40 rounded-md text-[#22D1F8] font-medium transition-all hover:border-[#22D1F8] hover:bg-[#22D1F8]/10;
+}
+
+/* Section styles */
+.section {
+  @apply py-16 md:py-20 px-4;
+}
+
+.section-alt {
+  @apply py-16 md:py-20 px-4 bg-gray-50 dark:bg-[#181F35]/50;
+}
+
+/* Container */
+.container {
+  @apply mx-auto max-w-7xl;
 }
